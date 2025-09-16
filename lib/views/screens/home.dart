@@ -16,8 +16,17 @@ class _HomeViewState extends State<HomeView> {
   Widget build(BuildContext context) {
     return Scaffold(
       key: scaffoldKey,
-      appBar: AppBar(),
-      drawer: const HomeDrawer(),
+      appBar: MediaQuery.sizeOf(context).width < 900
+          ? AppBar(
+              leading: IconButton(
+                icon: const Icon(Icons.menu),
+                onPressed: () {
+                  scaffoldKey.currentState?.openDrawer();
+                },
+              ),
+            )
+          : null,
+      drawer: const CustomDrawer(),
       body: const Padding(
         padding: EdgeInsets.symmetric(horizontal: 16.0),
         child: HomeBody(),

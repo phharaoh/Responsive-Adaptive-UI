@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_ui/views/widgets/custom_drawer_list_view.dart';
 
-class HomeDrawer extends StatelessWidget {
-  const HomeDrawer({super.key});
+class CustomDrawer extends StatelessWidget {
+  const CustomDrawer({super.key});
 
   @override
   Widget build(BuildContext context) {
